@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rei30</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#fff;color:#333;}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:#f8f8f8;display:flex;justify-content:space-between;align-items:center;padding:16px 40px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+header .logo{font-weight:800;font-size:24px;}
+header nav a{margin:0 12px;text-decoration:none;color:#333;font-weight:500;}
+main{padding-top:80px;}
+.banner-slider{position:relative;overflow:hidden;width:100%;height:400px;}
+.banner-slider img{width:100%;height:400px;object-fit:cover;display:none;}
+.banner-slider img.active{display:block;}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;font-size:24px;padding:8px 12px;cursor:pointer;border-radius:4px;}
+.slider-btn.prev{left:16px;}
+.slider-btn.next{right:16px;}
+.section{padding:60px 40px;}
+.section h2{font-size:28px;margin-bottom:24px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+.card{border:1px solid #ddd;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;transition:0.2s;cursor:pointer;}
+.card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.card img{width:100%;display:block;}
+.card .card-title{padding:12px;font-size:18px;font-weight:600;text-align:center;}
+.video-section iframe{width:100%;height:360px;border:none;border-radius:8px;}
+footer{background:#222;color:#ccc;padding:40px;text-align:center;}
+.sns-icons{margin-top:24px;display:flex;justify-content:center;gap:12px;}
+.sns-icons a{color:#ccc;text-decoration:none;display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.05);}
+@media(max-width:900px){.banner-slider img{height:200px;}.video-section iframe{height:200px;}header{flex-direction:column;gap:12px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">DOZLE Corp.</div>
+  <nav>
+    <a href="#">LIVE</a>
+    <a href="#">NEWS</a>
+    <a href="#">EVENTS</a>
+    <a href="#">VIDEOS</a>
+    <a href="#">MEMBERS</a>
+    <a href="#">GOODS</a>
+    <a href="#">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+  <!-- バナースライダー -->
+  <div class="banner-slider">
+    <img src="banner1.jpg" class="active" alt="Banner1">
+    <img src="banner2.jpg" alt="Banner2">
+    <img src="banner3.jpg" alt="Banner3">
+    <button class="slider-btn prev">&#10094;</button>
+    <button class="slider-btn next">&#10095;</button>
+  </div>
+
+  <!-- NEWS -->
+  <section class="section news">
+    <h2>最新情報</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="news1.jpg" alt="News1">
+        <div class="card-title">reitou999について</div>
+      </div>
+      <div class="card">
+        <img src="news2.jpg" alt="News2">
+        <div class="card-title">今後のtexas事情について</div>
+      </div>
+      <div class="card">
+        <img src="news3.jpg" alt="News3">
+        <div class="card-title">消えたsouth_islandはどうなる?!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section events">
+    <h2>イベント</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="event1.jpg" alt="Event1">
+        <div class="card-title">第3回texas市民限定rei30によるお金配り大会</div>
+      </div>
+      <div class="card">
+        <img src="event2.jpg" alt="Event2">
+        <div class="card-title">第2回らーす民なら誰でもok!多分当たる....wwガチャガチャ大会</div>
+      </div>
+      <div class="card">
+        <img src="event3.jpg" alt="Event3">
+        <div class="card-title">第2回らーすtexas民限定身内釣り大会</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERS -->
+  <section class="section members">
+    <h2>メンバー</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="member1.jpg" alt="Member1">
+        <div class="card-title">rei30(市長)</div>
+      </div>
+      <div class="card">
+        <img src="member2.jpg" alt="Member2">
+        <div class="card-title">kosian</div>
+      </div>
+      <div class="card">
+        <img src="member3.jpg" alt="Member3">
+        <div class="card-title">akiponakipon</div>
+      </div>
+      <div class="card">
+        <img src="member4.png" alt="member4">
+        <div class="card-title">Strongtrue1250</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="section video-section">
+    <h2>VIDEOS</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube Video" allowfullscreen></iframe>
+  </section>
+</main>
+
+<footer>
+  <div>© TEXAS by　らーす鯖rarth.xyz</div>
+  <div class="sns-icons">
+    <a href="#" aria-label="Twitter"><img src="icon-twitter.svg" alt="Twitter" width="18"></a>
+    <a href="#" aria-label="YouTube"><img src="icon-youtube.svg" alt="YouTube" width="18"></a>
+    <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt="Instagram" width="18"></a>
+    <a href="#" aria-label="Discord"><img src="icon-discord.svg" alt="Discord" width="18"></a>
+  </div>
+</footer>
+
+<script>
+// バナースライダー JS
+let slides = document.querySelectorAll('.banner-slider img');
+let current = 0;
+function showSlide(index){
+  slides.forEach(s=>s.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+document.querySelector('.slider-btn.next').addEventListener('click', ()=>{
+  current = (current+1)%slides.length;
+  showSlide(current);
+});
+document.querySelector('.slider-btn.prev').addEventListener('click', ()=>{
+  current = (current-1+slides.length)%slides.length;
+  showSlide(current);
+});
+setInterval(()=>{current=(current+1)%slides.length;showSlide(current);},5000);
+</script>
+
+</body>
+</html>
